@@ -19,11 +19,11 @@ public class ContainerImpl implements iContainer {
     }
     @Override
     public DoSomethingHost getClassA() {
-        return new DoSomethingHost(DoSomething.getInstance());
+        return new DoSomethingHost(new DoSomething());
     }
 
     @Override
     public DoClassBImplHost getClassB() {
-        return new DoClassBImplHost(DoClassBImpl.getInstance());
+        return new DoClassBImplHost(new DoClassBImpl());
     }
 }
