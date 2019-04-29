@@ -1,5 +1,5 @@
 package com.tuan88291.dependenceinjectiondemo.utils.classB;
 
-public interface iClassB {
+public interface ClassBservice {
     void showUpClassB(String msg);
 }
