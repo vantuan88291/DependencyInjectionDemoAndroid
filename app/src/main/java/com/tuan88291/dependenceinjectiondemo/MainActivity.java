@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         injector = ContainerImpl.getInstance();
-        injector.getClassA().showUpClassA("this is class A");
-        injector.getClassB().showUpClassB("this is class B");
+        injector.getClassA().showUp("this is class A");
+        injector.getClassB().showUp("this is class B");
     }
 }

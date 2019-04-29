@@ -1,9 +1,9 @@
 package com.tuan88291.dependenceinjectiondemo.container;
 
 import com.tuan88291.dependenceinjectiondemo.utils.classA.DoSomething;
-import com.tuan88291.dependenceinjectiondemo.utils.classA.iDoSomething;
+import com.tuan88291.dependenceinjectiondemo.utils.classA.DoSomethingHost;
 import com.tuan88291.dependenceinjectiondemo.utils.classB.DoClassBImpl;
-import com.tuan88291.dependenceinjectiondemo.utils.classB.iClassB;
+import com.tuan88291.dependenceinjectiondemo.utils.classB.DoClassBImplHost;
 
 public class ContainerImpl implements iContainer {
     private static ContainerImpl instance;
@@ -18,12 +18,12 @@ public class ContainerImpl implements iContainer {
         return instance;
     }
     @Override
-    public iDoSomething getClassA() {
-        return DoSomething.getInstance();
+    public DoSomethingHost getClassA() {
+        return new DoSomethingHost(DoSomething.getInstance());
     }
 
     @Override
-    public iClassB getClassB() {
-        return DoClassBImpl.getInstance();
+    public DoClassBImplHost getClassB() {
+        return new DoClassBImplHost(DoClassBImpl.getInstance());
     }
 }

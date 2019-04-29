@@ -1,9 +1,9 @@
 package com.tuan88291.dependenceinjectiondemo.container;
 
-import com.tuan88291.dependenceinjectiondemo.utils.classA.iDoSomething;
-import com.tuan88291.dependenceinjectiondemo.utils.classB.iClassB;
+import com.tuan88291.dependenceinjectiondemo.utils.classA.DoSomethingHost;
+import com.tuan88291.dependenceinjectiondemo.utils.classB.DoClassBImplHost;
 
 public interface iContainer {
-    iDoSomething getClassA();
-    iClassB getClassB();
+    DoSomethingHost getClassA();
+    DoClassBImplHost getClassB();
 }
